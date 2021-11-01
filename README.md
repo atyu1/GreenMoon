@@ -48,3 +48,8 @@ which are not network accessible, like bluetooth sensors.
 ## Global Variables
 Global variables is used to configure the sensors to give info for various connectivity things.
 <TBD> Add list of variables
+
+## Requirements (before virtualenv or requirerements.txt)
+- Remove me when requirements file presents
+pip3 install adafruit-circuitpython-dht
+sudo apt-get install libgpiod2
