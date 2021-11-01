@@ -1,8 +1,9 @@
-class SesnsorError(Exception):
+
+class SensorError(Exception):
     """ Common Error Class for all Sensors """
     pass
 
-class Sensor(SesnsorError):
+class Sensor(SensorError):
     """ Base class for all Sensors """
 
     def run(self):
