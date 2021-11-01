@@ -5,7 +5,7 @@ from sensor import SensorError
 import time
 import board
 import adafruit_dht
-from src import sensor
+
 
 _PIN = board.D23
 
