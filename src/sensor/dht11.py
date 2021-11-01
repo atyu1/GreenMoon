@@ -2,10 +2,9 @@
 from .sensor import Sensor, SensorError
 
 import time
-import board
 import adafruit_dht
 
-_PIN = board.D23
+_PIN = 4
 
 
 class Dht11Sensor(Sensor):
