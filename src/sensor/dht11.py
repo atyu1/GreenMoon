@@ -6,7 +6,6 @@ import time
 import board
 import adafruit_dht
 
-
 _PIN = board.D23
 
 
