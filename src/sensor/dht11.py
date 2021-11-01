@@ -1,6 +1,5 @@
 
-from sensor import Sensor
-from sensor import SensorError
+from .sensor import Sensor, SensorError
 
 import time
 import board
