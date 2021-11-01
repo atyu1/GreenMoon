@@ -15,7 +15,6 @@ class Dht11Sensor(Sensor):
         self.sensor = adafruit_dht.DHT11(_PIN)
     
     def run(self):
-        data = 
         try:
             temperature = {"temperature": sensor.temperature}
             humidity = {"humidity": sensor.humidity}
