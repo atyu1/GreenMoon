@@ -26,16 +26,26 @@ which are not network accessible, like bluetooth sensors.
  - Handlers give different interface options to communicate with custom servers or GreenPlanet
 
 ## Collected Data Format
- - Json formate data points collected from sensors
+- Json formated data points from raw sensors
+```
+{
+	"data": [
+		"sensorname1": "value1",
+		"sensorname2": "valie2"
+	]
+}
+```
+
+- Json formated data points collected from handlers
  ```
- {  
-    'timestamp':<int>,
-    'location':<string>,
-    'room':<string>,
-    'name':<string>,
-    'sensor':<string>,
-    'value':<real/float>
-  }
+ {
+ 	'timestamp': < int > ,
+ 	'location': < string > ,
+ 	'room': < string > ,
+ 	'name': < string > ,
+ 	'sensor': < string > ,
+ 	'value': < real / float >
+ }
   ```
 
 `Explanation:`
