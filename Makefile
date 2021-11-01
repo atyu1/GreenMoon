@@ -7,7 +7,3 @@ installdht:
 	sudo apt-get install python3-libgiod
 	sudo apt-get install libgpiod2
 	sudo reboot
-
-run:
-	cd ~/GreenMoon/src
-	sudo python3 app.py
