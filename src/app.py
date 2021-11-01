@@ -2,12 +2,17 @@
 
 from sensor.dht11 import Dht11Sensor as Sensor
 import os
-import logger
+import logging
+
+from sensor.sensor import SensorError
 
 def main():
 
     dht = Sensor()
-    data = dht.run()
+    try:
+        data = dht.run()
+    except SensorError as e:
+        logging.error(f"Issue with DHT Sensor: {e}")
 
     print (data)
 
