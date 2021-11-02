@@ -39,7 +39,7 @@ which are not network accessible, like bluetooth sensors.
 - Json formated data points collected from handlers
  ```
  {
- 	'timestamp': < int > ,
+ 	'timestamp': < float > ,
  	'location': < string > ,
  	'room': < string > ,
  	'name': < string > ,
