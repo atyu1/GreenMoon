@@ -43,8 +43,10 @@ which are not network accessible, like bluetooth sensors.
  	'location': < string > ,
  	'room': < string > ,
  	'name': < string > ,
- 	'sensor': < string > ,
- 	'value': < real / float >
+    'datapoints': <dict> {
+        'sensor': < string > ,
+        'value': < real / float >
+    }
  }
   ```
 
