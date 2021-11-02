@@ -42,8 +42,9 @@ which are not network accessible, like bluetooth sensors.
  	'timestamp': < float > ,
  	'location': < string > ,
  	'room': < string > ,
- 	'name': < string > ,
-    'datapoints': <dict> {
+    'name': < string > ,
+    'datapoints': <dict> 
+    {
         'sensor': < string > ,
         'value': < real / float >
     }
