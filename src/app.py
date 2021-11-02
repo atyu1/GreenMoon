@@ -6,6 +6,7 @@ import logging
 
 from sensor.sensor import SensorError
 
+
 def main():
 
     dht = Sensor()
@@ -14,7 +15,8 @@ def main():
     except SensorError as e:
         logging.error(f"Issue with DHT Sensor: {e}")
 
-    print (data)
+    print(data)
 
-if __name__== "__main__":
+
+if __name__ == "__main__":
     main()
