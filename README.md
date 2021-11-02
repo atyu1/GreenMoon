@@ -31,24 +31,26 @@ which are not network accessible, like bluetooth sensors.
 {
 	"data": [
 		"sensorname1": "value1",
-		"sensorname2": "valie2"
+		"sensorname2": "value2"
 	]
 }
 ```
 
 - Json formated data points collected from handlers
  ```
- {
- 	'timestamp': < float > ,
- 	'location': < string > ,
- 	'room': < string > ,
-    'name': < string > ,
-    'datapoints': <dict> 
-    {
-        'sensor': < string > ,
-        'value': < real / float >
-    }
- }
+{
+	'timestamp': < float > ,
+	'location': < string > ,
+	'room': < string > ,
+	'name': < string > ,
+	'datapoints': [{
+		'sensor': < string > ,
+		'value': < real / float >
+	}, {
+		'sensor': < string > ,
+		'value': < real / float >
+	}]
+}
   ```
 
 `Explanation:`
