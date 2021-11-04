@@ -11,13 +11,13 @@ from src.handler.handler import HandlerError
 
 def main():
 
-    dht = Sensor()
+    mysense = Sensor()
     data = {}
 
     try:
-        data = dht.run()
+        data = mysense.run()
     except SensorError as e:
-        logging.error(f"Issue with DHT Sensor: {e}")
+        logging.error(f"Issue with Sensor: {e}")
     except HandlerError as e:
         logging.error(f"Issue with Handler: {e}")
 
