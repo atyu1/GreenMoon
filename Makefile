@@ -1,4 +1,4 @@
-all: installdht
+all: installdht setconfig
 
 installdht:
 	@echo "Install DHT11 dependencies - before containers"
