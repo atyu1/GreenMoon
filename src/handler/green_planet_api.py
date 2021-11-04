@@ -1,9 +1,10 @@
-import requests
+
 from .handler import Handler, HandlerError
 from cerberus import Validator
 from time import time
 from os import environ as env
 import logging
+import requests
 
 _TIMEOUT = 20
 _DATA_SCHEMA = {
@@ -27,7 +28,7 @@ class GreenPlanetApi(Handler):
 
     def __init__(self, raw_data={}):
         super().__init__(self)
-        print (raw_data)
+        print(raw_data)
         self._raw_data = raw_data
         self._load_config()
 
