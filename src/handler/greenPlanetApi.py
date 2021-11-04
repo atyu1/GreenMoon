@@ -12,7 +12,7 @@ _DATA_SCHEMA = {
     "room": {"type": "string"},
     "name": {"type": "string"},
     "datapoints": {
-        "type": "dict",
+        "type": "list",
         "schema": {
             "sensor": {"type": "string"},
             "value": {"type": "float"}
@@ -25,8 +25,9 @@ class GreenPlanetApi(Handler):
     """ Api to communicate with external API server"""
     """ TODO: Add auth and TLS """
 
-    def __init__(self, raw_data=[]):
+    def __init__(self, raw_data={}):
         super().__init__(self)
+        print (raw_data)
         self._raw_data = raw_data
         self._load_config()
 
@@ -84,13 +85,13 @@ class GreenPlanetApi(Handler):
         self._load_room()
         self._load_url()
 
-    def validate(self, tmp_data):
+    def validate(self):
         """ Be sure that data have proper format """
         v = Validator(_DATA_SCHEMA)
 
-        if v.validate(tmp_data):
+        if v.validate(self.data):
             logging.info("Data passed the Validation")
-            logging.debug(f"Data after validation: {tmp_data}")
+            logging.debug(f"Data after validation: {self.data}")
         else:
             raise HandlerError(
                 f"Validation issue with data from sensors: {v.errors}")
@@ -101,7 +102,7 @@ class GreenPlanetApi(Handler):
             "timestamp": self.timestamp,
             "location": self.location,
             "room": self.room,
-            "datapoints": self.raw_data["data"]
+            "datapoints": self._raw_data["data"]
         }
 
         return tmp_data
