@@ -1,3 +1,5 @@
+SHELL := /bin/bash
+
 all: installdht setconfig
 
 installdht:
@@ -11,8 +13,6 @@ installdht:
 	sudo pip3 install git+git://github.com/pyeve/cerberus.git
 	sudo reboot
 
-setconfig:
-	export GREENMOON_ROOM="test_room"
-	export GREENMOON_LOCATION="test_location"
-	export GREENMOON_NAME="test_name"
-	export GREENPLANET_URL="http://localhost:8080/api/v1"
+MYPATH:=$(shell pwd)/.env
+config:
+	source $(MYPATH)
