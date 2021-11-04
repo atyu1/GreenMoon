@@ -1,5 +1,6 @@
 import requests
 from .handler import Handler, HandlerError
+from cerberus import Validator
 from time import time
 from os import environ as env
 import logging
