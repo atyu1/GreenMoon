@@ -57,8 +57,18 @@ class GreenPlanetApi(Handler):
 
         logging.debug(f"Room loaded from env: {self.room}")
 
+    def _load_name(self):
+        """ Load 'name' Config from OS Environemnt variable """
+        try:
+            self.name = env['GREENMOON_NAME']
+        except KeyError:
+            raise HandlerError(
+                f"Missing 'GREENMOON_NAME' environment variable")
+
+        logging.debug(f"Room loaded from env: {self.room}")
+
     def _load_url(self):
-        """ Load 'room' Config from OS Environemnt variable """
+        """ Load 'url' Config from OS Environemnt variable """
         try:
             self.url = env['GREENPLANET_URL']
         except KeyError:
