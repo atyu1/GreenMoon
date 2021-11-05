@@ -68,3 +68,11 @@ Global variables is used to configure the sensors to give info for various conne
 - Remove me when requirements file presents
 pip3 install adafruit-circuitpython-dht
 sudo apt-get install libgpiod2
+
+
+## Docker building
+We use sensor based building to avoid to much overhead per container.
+We don't wanna load all the sensor files.
+Create your snesor file and name as: dht11.py (for sensor) and app_dht11.py (for app)
+After run:
+ ```docker build --build-arg sensor_name=dht11```
