@@ -77,4 +77,10 @@ Create your snesor file and name as: dht11.py (for sensor) and app_dht11.py (for
 
 
 After run:
- ```docker build --build-arg sensor_name=dht11```
+ ```docker build --build-arg sensor_name=dht11 -t GreenMoon-dht11 .```
+
+## Docker running
+Running a container requires to source the env variables from .env file.
+
+Example:
+``` docker run --env-file .env --name GreenMoon-dht11 ```
