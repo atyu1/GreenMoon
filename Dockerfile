@@ -1,4 +1,6 @@
-FROM python:3
+# syntax=docker/dockerfile:1
+
+FROM python:3.8-slim-buster
 COPY requirements.txt .
 ARG sensor_name
 RUN pip3 install -r requirements.txt
@@ -10,4 +12,4 @@ COPY src/sensor/$sensor_name.py /var/app/src
 COPY src/app_$sensor_name.py /var/app/src
 
 WORKDIR /var/app/src
-CMD["python3", "app_$sensor_name.py"]
+CMD [ "python3", "app_$sensor_name.py"]
